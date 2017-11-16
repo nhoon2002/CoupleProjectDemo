@@ -1,0 +1,29 @@
+body {
+   background-color: #ffefef;
+   background: url('https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/15802086_1851232148485914_8230584384969768960_n.jpg') no-repeat center center fixed;
+   background-size: cover;
+
+}
+/* Major Smartphones */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+     background-color: #ffefef;
+     background: url('https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/15802086_1851232148485914_8230584384969768960_n.jpg') no-repeat center center fixed;
+     background-size: cover;
+
+  }
+  #centerDiv {
+    margin-top: 500px;
+  }
+}
+
+
+#centerDiv {
+
+  text-align: center;
+
+  font-family: 'Jeju Hallasan';
+}
+.centerFont {
+  font-size: 70px;
+}
