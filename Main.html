@@ -2,7 +2,9 @@
 <html>
 <head>
    <title>Main Page 1</title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="Main.css">
    <link rel="stylesheet" type="text/css" href="sidebar.css">
@@ -48,7 +50,7 @@
                         <i class="fa fa-cloud-upload"></i>
                     </label>
                     <input id="inputImg1" type="file" accept="image/*"/>
-                    <div class="mainImg"><img id="main_IMG1" src="" alt="" width='250' height='250' class='photoMain' /></div>
+                    <div class="mainImg"><img id="main_IMG1" src="" alt="" width='250' height='250' class='img-responsive img_main img-rounded' /></div>
 
                 </div>
                 <div id="mainPhoto2">
@@ -57,13 +59,28 @@
                       <i class="fa fa-cloud-upload"></i>
                   </label>
                   <input id="inputImg2" type="file" accept="image/*"/>
-                  <div class="mainImg"><img id="main_IMG2" src="" alt="" width='250' height='250' class='photoMain'/></div>
+                  <div class="mainImg"><img id="main_IMG2" src="" alt="" width='250' height='250' class='img-responsive img_main img-rounded'/></div>
                 </div>
               </div>
               <div class="col-md-1 offsetter"></div>
 
 
           </div>
+          <div class="row">
+            <div class="col-md-1 offsetter"></div>
+            <div class="col-md-10 centDiv">
+              <div>
+                <h1>Today: <span id="todayDate"></span></h1>
+                <h3><span id="counter"></span></h3>
+              </div>
+            </div>
+            <div class="col-md-1 offsetter"></div>
+          </div>
+
+
+
+
+
         </div>
       </div>
 </body>
