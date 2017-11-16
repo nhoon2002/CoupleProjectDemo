@@ -41,6 +41,10 @@
           <div class="row">
             <div class="col-md-12">
               <input type="file" name="file" class="inputimg" id="nameImg" accept="image/*">
+
+
+              <div id='photo'>
+              </div>
             </div>
 
 
@@ -108,7 +112,10 @@ document.getElementById("nameImg").addEventListener("change", function(event) {
     // Upload completed successfully, now we can get the download URL
     var downloadSnap = uploadTask.snapshot;
     var downloadURL = uploadTask.snapshot.downloadURL;
+
+    document.getElementById("photo").innerHTML=`<img src='${downloadURL}' />`
     console.log(downloadSnap);
+
   });
 })
 
