@@ -3,6 +3,7 @@
 <head>
    <title>Main Page 1</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="Main.css">
    <link rel="stylesheet" type="text/css" href="sidebar.css">
    <link rel="stylesheet" type="text/css" href="bubbles.css">
@@ -39,13 +40,27 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-md-12">
-              <input type="file" name="file" class="inputimg" id="nameImg" accept="image/*">
+              <div class="col-md-1 offsetter"></div>
+              <div class="col-md-10">
+                <div id="mainPhoto1">
 
+                    <label for="inputImg1" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i>
+                    </label>
+                    <input id="inputImg1" type="file" accept="image/*"/>
+                    <div class="mainImg"><img id="main_IMG1" src="" alt="" width='250' height='250' class='photoMain' /></div>
 
-              <div id='photo'>
+                </div>
+                <div id="mainPhoto2">
+
+                  <label for="inputImg2" class="custom-file-upload">
+                      <i class="fa fa-cloud-upload"></i>
+                  </label>
+                  <input id="inputImg2" type="file" accept="image/*"/>
+                  <div class="mainImg"><img id="main_IMG2" src="" alt="" width='250' height='250' class='photoMain'/></div>
+                </div>
               </div>
-            </div>
+              <div class="col-md-1 offsetter"></div>
 
 
           </div>
@@ -54,71 +69,5 @@
 </body>
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 <script src="logic.js" type="text/javascript"></script>
-<script>
-var file;
-// Create a root reference
-var storageRef = firebase.storage().ref();
-
-
-
-document.getElementById("nameImg").addEventListener("change", function(event) {
-
-  console.log(event.target.files[0]);
-  file = event.target.files[0];
-
-  // Create the file metadata
-  var metadata = {
-    contentType: 'image/jpeg'
-  };
-
-
-  // Upload file and metadata to the object 'images/mountains.jpg'
-  var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
-
-  // Listen for state changes, errors, and completion of the upload.
-  uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-    function(snapshot) {
-      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
-      switch (snapshot.state) {
-        case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
-          break;
-        case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
-          break;
-      }
-    }, function(error) {
-
-    // A full list of error codes is available at
-    // https://firebase.google.com/docs/storage/web/handle-errors
-    switch (error.code) {
-      case 'storage/unauthorized':
-        // User doesn't have permission to access the object
-        break;
-
-      case 'storage/canceled':
-        // User canceled the upload
-        break;
-
-
-
-      case 'storage/unknown':
-        // Unknown error occurred, inspect error.serverResponse
-        break;
-    }
-  }, function() {
-    // Upload completed successfully, now we can get the download URL
-    var downloadSnap = uploadTask.snapshot;
-    var downloadURL = uploadTask.snapshot.downloadURL;
-
-    document.getElementById("photo").innerHTML=`<img src='${downloadURL}' />`
-    console.log(downloadSnap);
-
-  });
-})
-
-
-</script>
+<script src="Main.js" type="text/javascript"></script>
 </html>
