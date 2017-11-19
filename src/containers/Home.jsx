@@ -85,7 +85,7 @@ class Home extends Component {
 						  <span className="h1Heart">&hearts;</span>
 					   </h1>
 					   <h3 className="subheading">우리들의 행복한 시간</h3>
-					   <button className="btn btn-primary" name="button" onClick={() => this.props.router.push('/index')}>완료!</button>
+					   <button className="btn btn-primary" name="button" onClick={() => this.props.router.push('/index')}>{this.props.currentUser.displayName}!</button>
 					 </div>
 					 {/* <div className="col-md-2 col-lg-2 col-xs-2 col-sm-2"></div> */}
 				  </div>
