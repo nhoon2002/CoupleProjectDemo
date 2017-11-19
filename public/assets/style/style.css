@@ -15,7 +15,7 @@ SECTION-III: Sidenav.jsx
 @import url('https://fonts.googleapis.com/earlyaccess/jejuhallasan.css');
 /*START SECTION-I: Home.jsx*/
 .maindiv.Main{
-   
+
 }
 body.Home {
    background-color: #ffefef;
@@ -168,7 +168,7 @@ body { overflow: hidden }
     -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
 }
 .x5 {
-    left: 80%;
+    left: 72%;
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
     transform: scale(0.8);
