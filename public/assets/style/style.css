@@ -1,0 +1,297 @@
+/*
+
+Table of Contents
+--------------
+SECTION-I: Home.jsx
+SECTION-II: Bubbles.jsx
+SECTION-III: Sidenav.jsx
+
+
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+@import url('https://fonts.googleapis.com/earlyaccess/jejuhallasan.css');
+/*START SECTION-I: Home.jsx*/
+.maindiv.Main{
+   
+}
+body.Home {
+   background-color: #ffefef;
+   background: url('https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/15802086_1851232148485914_8230584384969768960_n.jpg') no-repeat center center fixed;
+   background-size: cover;
+
+}
+/* Major Smartphones */
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+     background-color: #ffefef;
+     background: url('https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/15802086_1851232148485914_8230584384969768960_n.jpg') no-repeat center center fixed;
+     background-size: cover;
+
+  }
+
+}*/
+
+
+#centerDiv {
+
+  text-align: center;
+
+  font-family: 'Jeju Hallasan';
+
+  margin-top: 20%;
+}
+.centerFont {
+  font-size: 4em;
+  color: #5d96d2;
+}
+.h1Heart {
+   color: #ff7089;
+}
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+.subheading {
+
+
+   	border-right: .1em solid black;
+   	/*width: 14.5em;*/
+   	width: 14ch;
+   	margin: 0 auto;
+      margin-bottom: 40px;
+   	white-space: nowrap;
+   	overflow: hidden;
+   	-webkit-animation: typing 3s steps(30, end),
+   	           blink-caret .5s step-end infinite alternate;
+   }
+.fade-In {
+
+   animation-name: fadeIn;
+   -webkit-animation-name: fadeIn;
+   animation-duration: 6s;
+   -webkit-animation-duration: 6s;
+
+
+}
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+
+}
+
+@-webkit-keyframes fadeIn {
+   0% {opacity: 0;}
+   50% {opacity: 0;}
+   70% {opacity: 0.5;}
+   90% {opacity: 0.75}
+   100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   50% {opacity: 0;}
+   70% {opacity: 0.5;}
+   90% {opacity: 0.75}
+   100% {opacity: 1;}
+}
+
+.fadeIn {
+   -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+}
+.subheadingHolder {
+
+}
+
+/*END SECTION-I: Home.jsx*/
+
+
+/*START SECTION-II: Bubbles.jsx*/
+html,
+body,
+#bubbles { height: 100%; max-width: 100%; }
+body { overflow: hidden }
+#bubbles { padding: 100px 0 }
+.bubble {
+    width: 60px;
+    height: 60px;
+    background: #54c7e6;
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    position: absolute;
+}
+
+.x1 {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.2;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+    left: 20%;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x3 {
+    left: 35%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x4 {
+    left: 60%;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.35;
+    -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+.x5 {
+    left: 80%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3;
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes moveclouds {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+@-webkit-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:5%;
+    }
+}
+
+@-moz-keyframes moveclouds {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+@-moz-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+@-o-keyframes moveclouds {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+@-o-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+
+
+/*END SECTION-II: Bubbles.jsx*/
+
+/*START SECTION-III: Sidenav.jsx*/
+
+ul {
+
+  list-style-type: none;
+  /*text-align: center;*/
+}
+/* The side navigation menu */
+.sidenav {
+    font-family: 'Spectral SC', sans-serif;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+/*END SECTION-III: Sidenav.jsx*/
