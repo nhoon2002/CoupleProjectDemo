@@ -5,6 +5,7 @@ Table of Contents
 SECTION-I: Home.jsx
 SECTION-II: Bubbles.jsx
 SECTION-III: Sidenav.jsx
+SECTION-IV: Index.jsx
 
 
 
@@ -295,3 +296,34 @@ ul {
 
 
 /*END SECTION-III: Sidenav.jsx*/
+/*START SECTION-IV: Index.jsx*/
+
+body.Index {
+  max-width: 100%;
+  max-height: 100%;
+  background: url('../images/IMG_8288.JPG') no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+.topIndex {
+  height: 150px;
+  /*width: 100%;*/
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  -webkit-box-shadow: 0px 10px 83px 1px rgba(184,128,184,1);
+  -moz-box-shadow: 0px 10px 83px 1px rgba(184,128,184,1);
+  box-shadow: 0px 10px 83px 1px rgba(184,128,184,1);
+  }
+
+  .itCol {
+    border: 0.5px solid black;
+    background-color: red;
+
+  }
+
+
+
+
+/*END SECTION-IV: Index.jsx*/

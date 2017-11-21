@@ -165,6 +165,22 @@ export function SigninFacebook() {
 		  var user = result.user;
 		  console.log("facebook auth details:", user);
 		  dispatch({ type: 'FACEBOOK_CREATE_ACCOUNT_SUCESSS', payload: user});
+			//INITIALIZE FIREBASE USER DATABASE
+			const dbRef = firebase.database().ref(`users/${user.uid}/`);
+		  dbRef.set({
+		    username: user.displayName,
+		    email: user.email,
+		    profilePic : user.photoURL
+		  }).then(function(success) {
+				console.log('DBREFSET SUCCESS');
+
+			}).catch(function(error) {
+				
+			})
+
+
+
+
 		  dispatch({ type: 'SESSION_EXISTS', payload: user});
 		  browserHistory.push('/');
 		  // ...
