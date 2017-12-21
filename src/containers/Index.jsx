@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-
+import * as firebase from 'firebase';
 import {Link} from 'react-router';
+import ProfilePicHolder from '../components/ProfilePicHolder.jsx'
+
 
 
 
@@ -14,6 +16,10 @@ class Index extends Component {
 
   componentDidMount() {
     document.body.classList.add('Index')
+
+    // This code adds class to the body for handling of background image shift
+
+
   }
   componentWillUnmount() {
     document.body.classList.remove('Index')
@@ -21,15 +27,12 @@ class Index extends Component {
   }
    render() {
 
+
       return (
          <div className ="container contIndex">
-            <div className="row topIndex">
-              <div className="col-xs-4 itCol left">
-                <h3>Left</h3>
-              </div>
-              <div className="col-xs-4 itCol middle">Middle</div>
-              <div className="col-xs-4 itCol right">Right</div>
-            </div>
+            <ProfilePicHolder firebaseDB = {this.props.firebaseDB}/>
+
+
             <button type="button" className="btn btn-warning" onClick={() => this.props.signOut()}>Log Out</button>
          </div>
       )

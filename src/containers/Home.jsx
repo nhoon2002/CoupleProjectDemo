@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router';
 
 import Bubbles from '../components/Bubbles.jsx';
-import Sidenav from '../components/Sidenav.jsx';
+// import Sidenav from '../components/Sidenav.jsx';
 import fire from '../fire.js';
 
 

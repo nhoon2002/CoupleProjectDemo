@@ -7,6 +7,8 @@ import Home from './containers/Home.jsx';
 import Index from './containers/Index.jsx';
 import fire from './fire.js';
 import { checkSession } from './actions/userActions';
+import { fbUpdate } from './actions/userActions';
+
 
 // import Signup from './containers/Signup.jsx';
 // import Library from './containers/Library.jsx';
@@ -20,6 +22,13 @@ fire.auth().onAuthStateChanged(firebaseUser => {
 
 
 })
+fire.database().ref(`users/`).on('value', function(snapshot) {
+	console.log('Dispatched from routes.jsx');
+	var snap = snapshot.val();
+	store.dispatch(fbUpdate(snap));
+});
+
+
 // const checkReroute = () => {
 // 	console.log('Checking for existing session before reroute...');
 // 	store.dispatch(checkSession(firebase.auth().currentUser));

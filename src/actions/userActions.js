@@ -14,6 +14,11 @@ export function sampleAction() {
 
 	}
 }
+export function fbUpdate(snap) {
+	return function(dispatch) {
+		dispatch({type: 'DB_UPDATE', payload: Object.values(snap)});
+	}
+}
 
 
 
@@ -82,7 +87,7 @@ export function checkSession() {
 			console.log('browserhistory:', browserHistory);
 			console.log('Auth status changed: logged in as: ' + firebaseUser.email);
 			console.log('Current user: %s', firebaseUser.uid);
-
+			fbUpdate();
 			}
 		else {
 			dispatch({ type: 'SESSION_NULL', payload: ""})
@@ -167,16 +172,26 @@ export function SigninFacebook() {
 		  dispatch({ type: 'FACEBOOK_CREATE_ACCOUNT_SUCESSS', payload: user});
 			//INITIALIZE FIREBASE USER DATABASE
 			const dbRef = firebase.database().ref(`users/${user.uid}/`);
-		  dbRef.set({
-		    username: user.displayName,
-		    email: user.email,
-		    profilePic : user.photoURL
-		  }).then(function(success) {
-				console.log('DBREFSET SUCCESS');
+			console.log('----------');
 
-			}).catch(function(error) {
-				
-			})
+
+			console.log('-----------');
+			  dbRef.set({
+			    username: user.displayName,
+			    email: user.email,
+			    profilePic : user.photoURL
+			  })
+			  .then(
+				  function(success) {
+					console.log('DBREFSET SUCCESS');
+			  	  }
+		  	  )
+			  .catch(
+				  function(error) {
+					 console.log('Encounted error: dbRef');
+				  }
+			  )
+
 
 
 

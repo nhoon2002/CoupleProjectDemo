@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import * as actions from '../actions/userActions.js';
+import TriangleMenu from '../components/TriangleMenu.jsx';
 
 
 
@@ -20,6 +21,7 @@ class Main extends Component {
 
       <div className="maindiv Main">
          {/* Show header, but only if logged in. */}
+         <TriangleMenu />
 
           {React.cloneElement(this.props.children, this.props)}
 
